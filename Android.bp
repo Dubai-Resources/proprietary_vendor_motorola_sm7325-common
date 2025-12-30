@@ -1127,7 +1127,7 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libhidlmemory",
                 "android.hidl.memory@1.0",
-                "vendor.qti.qspmhal@1.0_vendor",
+                "vendor.qti.qspmhal@1.0",
                 "libdl",
                 "libz",
                 "liblog",
@@ -1147,7 +1147,7 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libhidlmemory",
                 "android.hidl.memory@1.0",
-                "vendor.qti.qspmhal@1.0_vendor",
+                "vendor.qti.qspmhal@1.0",
                 "libdl",
                 "libz",
                 "liblog",
@@ -4533,8 +4533,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.qspmhal@1.0_vendor",
-    stem: "vendor.qti.qspmhal@1.0",
+    name: "vendor.qti.qspmhal@1.0",
     owner: "motorola",
     strip: {
         none: true,
@@ -12948,7 +12947,7 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libutils",
-                "vendor.qti.qspmhal@1.0_vendor",
+                "vendor.qti.qspmhal@1.0",
                 "android.hidl.allocator@1.0",
                 "android.hidl.memory@1.0",
                 "libhidlbase",
@@ -13847,34 +13846,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libqspmsvc",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/libqspmsvc.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libbinder",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.ImsRtpService-V1-ndk",
     owner: "motorola",
     strip: {
@@ -13969,60 +13940,6 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "vendor.qti.imsrtpservice@3.0",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.qspmhal-V1-ndk",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.qspmhal-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "android.hardware.common-V2-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.qspmhal@1.0",
-    owner: "motorola",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/lib64/vendor.qti.qspmhal@1.0.so",
-            ],
-            shared_libs: [
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -16384,7 +16301,7 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/vendor.qti.qspmhal@1.0-service",
             ],
             shared_libs: [
-                "vendor.qti.qspmhal@1.0_vendor",
+                "vendor.qti.qspmhal@1.0",
                 "vendor.qti.qspmhal@1.0-impl",
                 "libhidlbase",
                 "liblog",
@@ -16493,43 +16410,6 @@ cc_prebuilt_binary {
                 "libcutils",
                 "libutils",
                 "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "qspmsvc",
-    owner: "motorola",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/bin/qspmsvc",
-            ],
-            shared_libs: [
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libbinder_ndk",
-                "libbinder",
-                "libbase",
-                "vendor.qti.qspmhal@1.0",
-                "vendor.qti.qspmhal-V1-ndk",
-                "android.hardware.thermal@1.0",
-                "android.hardware.thermal@2.0",
-                "android.hidl.memory@1.0",
-                "libhidlmemory",
-                "libhidlbase",
                 "libc++",
                 "libc",
                 "libm",

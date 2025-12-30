@@ -13,7 +13,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sm7325-common/proprietary/system/etc/sysconfig/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
     vendor/motorola/sm7325-common/proprietary/system_ext/etc/dpm/dpm.conf:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/dpm/dpm.conf \
     vendor/motorola/sm7325-common/proprietary/system_ext/etc/init/dpmd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/dpmd.rc \
-    vendor/motorola/sm7325-common/proprietary/system_ext/etc/init/qspmsvc.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/qspmsvc.rc \
     vendor/motorola/sm7325-common/proprietary/system_ext/etc/permissions/com.qti.dpmframework.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qti.dpmframework.xml \
     vendor/motorola/sm7325-common/proprietary/system_ext/etc/permissions/dpmapi.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/dpmapi.xml \
     vendor/motorola/sm7325-common/proprietary/system_ext/etc/permissions/moto-telephony.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/moto-telephony.xml \
@@ -389,7 +388,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.vpp@1.2 \
     vendor.qti.hardware.vpp@1.3 \
     vendor.qti.hardware.vpp@2.0 \
-    vendor.qti.qspmhal@1.0_vendor \
+    vendor.qti.qspmhal@1.0 \
     libadm \
     libqc2vppfilter \
     libqcodec2_base \
@@ -716,13 +715,10 @@ PRODUCT_PACKAGES += \
     libdpmtcm \
     libimscamera_jni \
     libimsmedia_jni \
-    libqspmsvc \
     vendor.qti.ImsRtpService-V1-ndk \
     vendor.qti.hardware.dpmservice@1.0 \
     vendor.qti.imsrtpservice@3.0 \
     vendor.qti.imsrtpservice@3.1 \
-    vendor.qti.qspmhal-V1-ndk \
-    vendor.qti.qspmhal@1.0 \
     CACertService \
     CneApp \
     IWlanService \
@@ -830,8 +826,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.qspmhal@1.0-service \
     vppservice \
     xtra-daemon \
-    dpmd \
-    qspmsvc
+    dpmd
 
 PRODUCT_PACKAGES += \
     system_ext_priv-app_ims_lib_arm64_libimscamera_jni_so \
